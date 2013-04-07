@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script type="text/javascript">
+        safari.application.addEventListener("message", function (e) {
+            if (e.name == "Go to Last tab") {
+                var tabs = safari.application.activeBrowserWindow.tabs;
+                tabs[tabs.length - 1].activate();
+            };
+        }, false);
+    </script>
+</body>
+</html>
